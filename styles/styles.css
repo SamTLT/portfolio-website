@@ -1,0 +1,198 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 300;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  animation-duration: 0.8s;
+  animation-name: showup;
+  width: 422px;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #222;
+  margin-top: 10px;
+  animation-duration: 1s;
+  animation-name: leftToRight;
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+h2 {
+  margin-top: -18px;
+  font-size: 18px;
+  color: #777;
+  font-weight: 300;
+  animation-duration: 1s;
+  animation-name: leftToRight;
+  animation-delay: 500ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.links {
+  margin-top: -5px;
+  height: 40px;
+}
+
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    margin-left: -25px;
+  }
+
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 100%;
+  margin: 10px 20px;
+}
+
+.github,
+.telegram,
+.email {
+  cursor: pointer;
+  width: 24px;
+}
+
+.telegram,
+.email {
+  margin-left: 5px;
+}
+
+.email {
+  width: 20px;
+  margin-bottom: 1px;
+  margin-left: 7px;
+}
+
+.decoration-blue {
+  position: absolute;
+  bottom: -95px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 205px solid transparent;
+  border-right: 160px solid transparent;
+  border-bottom: 145px solid #555963;
+  transform: rotate(145deg);
+}
+
+.decoration-gray {
+  position: absolute;
+  bottom: -75px;
+  right: -75px;
+  transform: rotate(-22deg);
+  background: #9daab3;
+  width: 420px;
+  height: 128px;
+}
+
+.github {
+  animation-duration: 1s;
+  animation-name: bottomToUp;
+  animation-delay: 750ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.telegram {
+  animation-duration: 1s;
+  animation-name: bottomToUp;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.email {
+  animation-duration: 1s;
+  animation-name: bottomToUp;
+  animation-delay: 1250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes bottomToUp {
+  from {
+    opacity: 0;
+    margin-bottom: -20px;
+  }
+
+  to {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .github,
+  .telegram {
+    margin-left: 0px;
+    width: 30px;
+  }
+
+  .email {
+    margin-left: 0px;
+    width: 26px;
+  }
+
+  .text-wrapper {
+    margin-top: -15px;
+    height: 30px;
+  }
+}
