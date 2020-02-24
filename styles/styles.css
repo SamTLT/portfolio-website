@@ -108,6 +108,14 @@ h2 {
   margin-left: 7px;
 }
 
+.decoration {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
 .decoration-blue {
   position: absolute;
   bottom: -95px;
@@ -146,14 +154,6 @@ h2 {
   opacity: 0;
 }
 
-.email {
-  animation-duration: 1s;
-  animation-name: bottomToUp;
-  animation-delay: 1250ms;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
 @keyframes bottomToUp {
   from {
     opacity: 0;
@@ -162,6 +162,26 @@ h2 {
 
   to {
     margin-bottom: 0;
+    opacity: 1;
+  }
+}
+
+.email {
+  animation-duration: 1s;
+  animation-name: bottomToUpEmail;
+  animation-delay: 1250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes bottomToUpEmail {
+  from {
+    opacity: 0;
+    margin-bottom: -20px;
+  }
+
+  to {
+    margin-bottom: 2px;
     opacity: 1;
   }
 }
