@@ -95,17 +95,12 @@ h2 {
 .email {
   cursor: pointer;
   width: 24px;
+  color: black;
 }
 
 .telegram,
 .email {
   margin-left: 5px;
-}
-
-.email {
-  width: 20px;
-  margin-bottom: 1px;
-  margin-left: 7px;
 }
 
 .decoration {
@@ -154,6 +149,14 @@ h2 {
   opacity: 0;
 }
 
+.email {
+  animation-duration: 1s;
+  animation-name: bottomToUp;
+  animation-delay: 1250ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 @keyframes bottomToUp {
   from {
     opacity: 0;
@@ -162,26 +165,6 @@ h2 {
 
   to {
     margin-bottom: 0;
-    opacity: 1;
-  }
-}
-
-.email {
-  animation-duration: 1s;
-  animation-name: bottomToUpEmail;
-  animation-delay: 1250ms;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes bottomToUpEmail {
-  from {
-    opacity: 0;
-    margin-bottom: -20px;
-  }
-
-  to {
-    margin-bottom: 2px;
     opacity: 1;
   }
 }
